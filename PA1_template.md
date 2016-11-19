@@ -58,7 +58,9 @@ with(AverageStepsPerInt,plot(interval,steps,type="l",xlab="5-minute intervals", 
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
-interval with most average steps. 
+
+
+Interval with most average steps. 
 
 ```r
 AverageStepsPerInt$interval[which.max(AverageStepsPerInt$steps)]
@@ -101,6 +103,8 @@ hist(TotalStepsPerDay2$steps, breaks=5, xlab="Steps", main = "Total Steps per Da
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+
+
 The mean and median total number of steps taken per day
 
 
@@ -123,7 +127,7 @@ median(TotalStepsPerDay2$steps, na.rm = TRUE)
 
 What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
-Using this strategy : replacing missing data with the average number of steps in the same interval doesn't change a lot the mean and the median, the overall shape of the distribution has not changed. 
+Using this strategy : replacing missing data with the average number of steps in the same interval slightly changes the mean and the median, the overall shape of the distribution has not changed. 
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -155,3 +159,6 @@ xyplot(steps ~ interval | daytype,
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+
+
+Step's activity starts the morning earlier during the weekdays, then during the rest of the day it's more important during the weekend
